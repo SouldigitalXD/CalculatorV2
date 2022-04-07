@@ -1,0 +1,831 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ content.html_title }}</title>
+    <link rel="icon" type="image/x-icon" class="favicon" href="{{ get_asset_url('../assets/logo-icon.png') }}" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="{{ content.meta_description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+    <script src="https://kit.fontawesome.com/c8fe9e798f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ get_asset_url('../css/style.css') }}" />
+    <link rel="stylesheet" href="{{ get_asset_url('../css/banner.css') }}" />
+    <link rel="stylesheet" href="{{ get_asset_url('../css/accordion.css') }}" />
+    <link rel="stylesheet" href="{{ get_asset_url('../css/modal.css') }}" />
+    <link rel="stylesheet" href="{{ get_asset_url('../css/dropUp.css') }}" />
+    <link rel="stylesheet" href="{{ get_asset_url('../css/selection-menu.css') }}" />
+    <link rel="stylesheet" href="{{ get_asset_url('../css/table-comparation.css') }}" />
+    <link rel="stylesheet" href="{{ get_asset_url('../css/mediaPrint.css') }}" media="print" />
+  </head>
+  {{ standard_header_includes }}
+  <header>
+    <div class="container">
+      <div>
+        <a class="backgroundArrow" href="https://www.promax.com/"><img src="{{ get_asset_url('../assets/btn-back.png') }}" alt="leftArrow" /></a>
+      </div>
+      <figure class="logoTab-Desk">
+        <img class="logo" src="{{ get_asset_url('../assets/logo-promax.png') }}" alt="Promax" />
+        <p>Build your platform</p>
+      </figure>
+    </div>
+  </header>
+  <body>
+    <main>
+      <section id="main" class="main-content">
+        <section id="banner" class="banner">
+          <figure>
+            <picture id="on-off">
+              <img class="premise" src="{{ get_asset_url('../assets/illustration-onpremise.png') }}" alt="illustration" />
+              <img class="remote" src="{{ get_asset_url('../assets/illustration-remote.png') }}" alt="illustration" />
+              <img class="hybrid" src="{{ get_asset_url('../assets/illustration-hybrid.png') }}" alt="illustration" />
+              <img class="cloud" src="{{ get_asset_url('../assets/illstration-cloud-v2.png') }}" alt="illustration" />
+              <img class="platform-onpremise" src="{{ get_asset_url('../assets/illustration-onpremise-platform.png') }}" alt="illustration" />
+              <img class="platform-hybrid" src="{{ get_asset_url('../assets/illustration-hybrid-platform.png') }}" alt="illustration" />
+            </picture>
+            <div class="container">
+              <div class="banner__content" id="performanceBanner">
+                <p>Performance:</p>
+                <span class="performance-data">710</span>
+                <span>MB/s</span>
+              </div>
+              <div class="banner__content">
+                <p>Total Storage:</p>
+                <span class="storange-data">280</span>
+                <span>TB</span>
+              </div>
+            </div>
+          </figure>
+        </section>
+        <section id="cardSection" class="quotePrint printContainer">
+          <div class="header-quotePrint occult">
+            <div class="header-quoteTittle">
+              <h1>Quote</h1>
+            </div>
+            <div class="logo-quotePrint">
+              <img src="{{ get_asset_url('../assets/logo-promax.png') }}" alt="logo" />
+            </div>
+          </div>
+          <div class="quotePrint-content">
+            <section class="selection-menu__container">
+              <div class="selection-menu">
+                <section class="selection-menu__Solution color position fix">
+                  <div>
+                    <h1 class="selection-menu__tittle">ON-PREMISE</h1>
+                  </div>
+                  <div class="items occult">
+                    <p class="item">ITEM</p>
+                    <p class="cost">COST</p>
+                    <p class="price">PRICE</p>
+                  </div>
+                  <div class="selection-menu__content--block">
+                  <div class="selection-menu__content">
+                    <img class="selection-menu__content--icon" src="{{ get_asset_url('../assets/solution-icn-alt-01-onpremise.png') }}" alt="icon" />
+                    <img class="selection-menu__content--icon2 occult" src="{{ get_asset_url('../assets/solution-icn-alt-02-remote.png') }}" alt="icon" />
+                    <img class="selection-menu__content--icon3 occult" src="{{ get_asset_url('../assets/solution-icn-alt-03-hybrid.png') }}" alt="icon" />
+                    <img class="selection-menu__content--icon4 occult" src="{{ get_asset_url('../assets/solution-icn-alt-04-cloud.png') }}" alt="icon" />
+                    <div clas="selection-menu__content--wrapper" id="serverContentWrapper">
+                      <label class="selection-menu__content--label">16 Bay 8 Core</label>
+                      <p class="selection-menu__content--p">Direct Connect</p>
+                      <p class="selection-menu__platform--p" id="platformLabel" style="display: none;">Platform Studio</p>
+                      <p class="selection-menu__platform--p" id="platformSizeLabel" style="display: none;">15 TB</p>
+                      <p id="Swichtx" style="display:none" class="selection-menu__content--p">Already have</p>
+                    </div>
+                  </div>
+
+                  <div class="container-bar" id="serverPercentageBar">
+                    <div class="selection-menu__content--calc">
+                      <div>
+                        <span class="price-solution price-fonts">$</span>
+                        <span id="price1" class="price-solution price-fonts totalSP">0</span>
+                      </div>
+                      <div class="container-percentage">
+                        <div>
+                          <span class="percentage">0</span>
+                          <span>%</span>
+                        </div>
+                        <p>of total</p>
+                      </div>
+                    </div>
+                    <div id="progress-Bar-solution" class="barra" max="20000" min="0">
+                      <div class="progressColor"></div>
+                    </div>
+                  </div>
+                </div>
+                </section>
+                <section class="selection-menu__Storage color position fix" id="storageSect">
+                  <div class="selection-menu__Storage--content">
+                    <figure>
+                      <img src="{{ get_asset_url('../assets/infopanel-icn-01-storage.png') }}" alt="icon" />
+                    </figure>
+                    <div>
+                      <div>
+                        <label class="selection-menu__driverType">12 TB HDD</label>
+                        <span id="x2Driver" class="selection-menu__X2">x2</span>
+                      </div>
+                      <div id="expansionDetails">
+                        <p>Expansion</p>
+                        <div>
+                          <label class="selection-menu__expansionCapacity">128 TB HDD</label>
+                          <span id="x2Expansion" class="selection-menu__X2">x2</span>
+                        </div>
+                      </div>
+                      <!-- <p id="accelerated" style="display:none">Accelerated Upload</p> -->
+                    </div>
+                  </div>
+                  <div class="container-bar">
+                    <div class="selection-menu__content--calc">
+                      <div>
+                        <span class="price-storage price-fonts">$</span>
+                        <span id="price2" value="0" class="price-storage price-fonts totalSP">0</span>
+                      </div>
+                      <div class="container-percentage">
+                        <div>
+                          <span class="percentage">0</span>
+                          <span>%</span>
+                        </div>
+                        <p>of total</p>
+                      </div>
+                    </div>
+                    <div id="progress-Bar__storage" class="barra" max="20000" min="0">
+                      <div class="progressColor"></div>
+                    </div>
+                  </div>
+                </section>
+               
+                <section id="userSect" class="selection-menu__Users color position fix">
+                  <div class="selection-menu__users--content" style="align-items: flex-start;">
+                    <img src="{{ get_asset_url('../assets/infopanel-icn-02-users.png') }}" alt="users" />
+                    <div>
+                      <span class="usersNumTittle users">36</span>
+                      <label id="userLabelText" class="users">Users</label>
+                      <div>
+                        <div id="labelMHUsers" style="display: none;">
+                          <span class="usersNumMhTittle users">0</span>
+                          <label id="userMHLabelText" class="users usersmh">MediaHub Users</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container-bar">
+                    <div class="selection-menu__content--calc">
+                      <div style="display: none;">
+                        <span class="price-user price-fonts">$</span>
+                        <span id="price3" value="0" class="price-user price-fonts totalSP">0</span>
+                      </div>
+                    </div>
+                  <div style="margin-top: 10px selection-menu__users--content">
+                  </div>
+                  <div class="container-bar">
+                      <div class="selection-menu__content--calc">
+                        <div>
+                          <span class="price-user price-fonts">$</span>
+                          <span id="priceMediaHubUsers" value="0" class="price-user price-fonts totalSP">0</span>
+                        </div>
+                        <div class="container-percentage">
+                            <div class="container-percentage">
+                                <div>
+                                  <span id="perc3" class="percentage">0</span>
+                                  <span>%</span>
+                                </div>
+                              <p>of total</p>
+                            </div>
+                        </div>
+                      </div>
+                      <div id="progress-Bar__users" class="barra" max="20000" min="0">
+                          <div class="progressColor"></div>
+                      </div>
+                  </div>
+                  </div>
+                </section>
+
+
+                <!-- // MediaHub number y size -->
+            <section id="MHSect" style="display: none" class="selection-menu__Users color position fix">
+              <div class="selection-menu__users--content" style="align-items: flex-start;">
+                <img src="{{ get_asset_url('../assets/infopanel-icn-03-setup.png') }}" alt="setup-icn" />
+                <div>
+                  <span class="MHNumTitle users" id="mediaHubNum">0</span>
+                  <label class="users">MediaHubs </label>
+                  <div>
+                    <div>
+                      <span class="MHSizetitle users" id="mediaHubSize">0</span>
+                      <label class="users usersmh"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container-bar">
+                <div class="selection-menu__content--calc">
+                  <div style="display: none;">
+                    <span class="price-user price-fonts">$</span>
+                    <span id="priceMH" value="0" class="price-user price-fonts totalSP">0</span>
+                  </div>
+                </div>
+              <div style="margin-top: 10px" class="selection-menu__users--content">
+              </div>
+              <div class="container-bar">
+                  <div class="selection-menu__content--calc">
+                    <div>
+                      <span class="price-user price-fonts">$</span>
+                      <span id="priceMHSize" value="0" class="price-user price-fonts totalSP">0</span>
+                    </div>
+                    <div class="container-percentage">
+                        <div class="container-percentage">
+                            <div>
+                              <span id="perc3" class="percentage">0</span>
+                              <span>%</span>
+                            </div>
+                          <p>of total</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div id="progress-Bar__users" class="barra" max="20000" min="0">
+                      <div class="progressColor"></div>
+                  </div>
+              </div>
+              </div>
+            </section>
+
+
+
+
+                
+                <section id="setupSect" class="selection-menu__setup color position fix">
+                  <div class="selection-menu__setup--content">
+                    <figure>
+                      <img src="{{ get_asset_url('../assets/infopanel-icn-03-setup.png') }}" alt="setup-icn" />
+                    </figure>
+                    <div>
+                      <label class="Typical-formats" id="labelTypicalFormats">
+                        DSLR <br />
+                        Phone Footage
+                      </label>
+                      <p class="software-suites">
+                        Media <br />
+                        Management Suite
+                      </p>
+                      <div class="ptext">
+                        <p class="istallationsText">+ Installation</p>
+                        <p class="workflow" id="workflow">+ Workflow training</p>
+                        <p class="mediaHubSetUp" id="mediaHubSetUp" style="display: none">+ Media Hub Setup</p>
+                        <p id="accelerated" style="display: none">+ Software Sync</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container-bar">
+                    <div class="selection-menu__content--calc">
+                      <div>
+                        <span class="price-setup price-fonts">$</span>
+                        <span id="price4" value="0" class="price-setup price-fonts totalSP">0</span>
+                        <span id="price4a" value="0" style="display: none;">0</span>
+                        <span id="price4b" value="0" style="display: none;">0</span>
+                      </div>
+                      <div class="container-percentage">
+                        <div>
+                          <span class="percentage">0</span>
+                          <span>%</span>
+                        </div>
+                        <p>of total</p>
+                      </div>
+                    </div>
+                    <div id="progress-Bar__setup" class="barra" max="20000" min="0">
+                      <div class="progressColor"></div>
+                    </div>
+                  </div>
+                </section>
+                <section class="TotalPrint occult">
+                  <label>TOTAL:</label>
+                  <div class="total-contentPrint">
+                    <span class="price-fonts">$</span>
+                    <span class="counter" id="totalPrint">0</span>
+                  </div>
+                </section>
+              </div>
+            </section>
+             <div class="quotePrint-sideColumn occultSide">
+              <div>
+                <label class="proMAXSystems">ProMAX Systems</label>
+                <p class="address">7108 Katella Ave #445 Stanton, CA 90680 USA</p>
+              </div>
+              <div style="margin-top: 35px;">
+                <label class="questions">For sales questions</label>
+                <p class="parr">sales@promax.com</p>
+                <p class="parr">+1 (949) 346 1231</p>
+              </div>
+            </div>
+          </div> 
+        </section>
+        <section id="solutionOpt" id="accordion">
+          <div id="scroll" class="container">
+            <div class="accordion-item" id="solutionOptBtn">
+              <div class="accordion-item-header">
+                <img class="icn" src="{{ get_asset_url('../assets/sidebar-icn-01-solution.png') }}" alt="" />
+                SOLUTION
+                <div><div class="start-btn">Start here</div></div>
+              </div> 
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <label for="">Select Type</label>
+                  <div class="container-solution">
+                    <button id="btnImg" class="box box-L premise box-style value" value="710">
+                      <img src="{{ get_asset_url('../assets/solution-icn-01-onpremise@2x.png') }}" alt="On-premise" />
+                      <div>
+                        <span>On-Premise</span>
+                      </div>
+                    </button>
+                    <button id="btnImg" class="box remote value" value="200">
+                      <img src="{{ get_asset_url('../assets/solution-icn-02-remote@2x.png') }}" alt="Remote" />
+                      <div>
+                        <span>Remote</span>
+                      </div>
+                    </button>
+                    <button id="btnImg" class="box hybrid value" value="300">
+                      <img src="{{ get_asset_url('../assets/solution-icn-03-hybrid@2x.png') }}" alt="Hybrid" />
+                      <div>
+                        <span>Hybrid</span>
+                      </div>
+                    </button>
+                    <button id="btnImg" style="background-color: #e9e9e9" disabled class="box box-R cloud value" value="400">
+                      <img src="{{ get_asset_url('../assets/solution-icn-04-cloud@2x.png') }}" alt="Cloud" />
+                      <div>
+                        <span>Cloud <br/> 
+                          <span style="font-size: 9px;"> 
+                      (Coming soon)
+                    </span>
+                    </span>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="serverOpt" class="accordion-item">
+              <div class="accordion-item-header">
+                <img class="icn" src="{{ get_asset_url('../assets/sidebar-icn-02-server.png') }}" alt="" />
+                SERVER
+              </div>
+              <div class="accordion-item-body" id="serverAccordion">
+                <div class="accordion-item-body-content">
+                  <label for="">Server Type</label>
+                  <select id="serverSelect" class="select">
+                    {% for row in hubdb_table_rows(5327538) %}
+                    <option 
+                      value="{{ row.price }}" 
+                      bays="{{ row.bays }}" 
+                      {% if row.platform == 1 %} platform="{{ row.platform }} {% endif %} "
+                      {% if row.default == 1 %} selected {% endif %}
+                    >
+                      {{ row.desc }}
+                    </option>
+                    {% endfor %}
+                  </select>
+                  <div class="container-server">
+                    <button id="direct-connect" class="directSwitch box-L server-style" value="0">Direct connect</button>
+                    <button id="direct-switch" class="directSwitch box-R " value="3000">Switch</button>
+                  </div>
+
+                  <div id="alreadySwitch" style="display: flex; margin-top: 20px;" class="setup-switch">
+                    <label class="switch">
+                      <input name="alreadySwitch" type="checkbox" id="alreadySwitchChk" value="0" required />
+                      <span class="slider round"></span>
+                    </label>
+                    <label for="alreadySwitch">I already have a Switch</label>
+                  </div>
+                  <div class="container-server" style="margin-top: 1.5rem">
+                    <div id="platformStudioSection" style="display: none; margin-bottom: 0px !important; margin-top: 0px; justify-content: center;" class="setup-switch">
+                      <label style="text-align: center; width: 60%; font: normal normal normal 12px/16px Nunito Sans;" for="platformStudio">Performance may vary depending on file type and number of users</label>
+                    </div>
+                    <!-- <div id="platformSizeSection" style="display: none; flex: 1">
+                      <select id="platformSize" class="select">
+                      </select>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="storageOpt" class="accordion-item">
+              <div class="accordion-item-header">
+                <img class="icn" src="{{ get_asset_url('../assets/sidebar-icn-03-storage.png') }}" alt="" />
+                STORAGE
+              </div>
+              <div class="accordion-item-body" >
+                <div class="accordion-item-body-content">
+                  <div class="storage__container">
+                    <div class="storage">
+                      <label id="storageDiskLabel" for="">Drive Type</label>
+                      <select id="selectDirect" class="select">
+                        {% for row in hubdb_table_rows(5327541) %}
+                        <option 
+                          value="{{ row.price }}" 
+                          storage="{{ row.storage }}" 
+                          {% if row.default == 1 %} selected {% endif %}
+                        >
+                          {{ row.desc }}
+                        </option>
+                        {% endfor %}
+                      </select>
+                      <input id="cloudStorage" type="number" class="select" value="25" max="100" min="1" step="1" style="display: none;"/>
+                      <div id="expansionCapacityInput">
+                      <label for="">Expansion Capacity (TB)</label>
+                      <input id="selectNumExp" type="number" class="select" value="1" max="100" min="1" step="1" />
+                      <!-- <select id="selectExpansion" class="select"> -->
+                        <!-- <option value="4250" selected storage="128">128 TB HDD</option>
+                        <option value="5550" storage="192">192 TB HDD</option>
+                        <option value="8550" storage="256">256 TB HDD</option>
+                        <option value="9250" storage="384">384 TB HDD</option>
+                        <option value="19250" storage="122">122 TB SSD</option> -->
+                      <!-- </select> -->
+                    </div>
+                    </div>
+                    <div class="storage" id="driveNumberSection">
+                      <label for="">Number of Drives</label>
+                      <input id="selectNum" type="number" class="select" value="16" max="100" min="1" step="1" />
+                      <label for="">Number of Expansions</label>
+                      <select id="selectNEx" class="select">
+                        <option value="0" selected>x0</option>
+                        <option value="1">x1</option>
+                        <option value="2">x2</option>
+                        <option value="3">x3</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="usersOpt" class="accordion-item">
+              <div class="accordion-item-header">
+                <div>
+                  <img class="icn" src="{{ get_asset_url('../assets/sidebar-icn-04-users.svg') }}" alt="icn" />
+                </div>
+                USERS
+              </div>
+              <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                  <label id="userInputLabelText" for="">Users</label>
+                  <input type="number" id="numberOfUser" class="select nUsers" value="2" min="0" max="48" step="1" />
+                  <div id="numMHUsers" style="display: none;">
+                    <label id="userInputMHLabelText" for="">Media Hub Users</label>
+                    <input type="number" id="inputmediaHubUser" class="select nMHUsers" value="2" min="0" max="48" step="1" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="setupMedia" style="display:none" class="accordion-item">
+              <div class="accordion-item-header">
+                <img class="icn" src="{{ get_asset_url('../assets/sidebar-icn-05-setup.png') }}" alt="icn" />
+                REMOTE USERS
+              </div>
+              <div  class="accordion-item-body">
+                <div  class="accordion-item-body-content">
+                        <div >
+                          <label for="">Number of MediaHubs</label>
+                            <input id="NumMh" type="number" class="select" value="2" max="100" min="0" step="1" />
+                          <label for="">Size of MediaHubs</label>
+                          <select id="sizeMh" class="select">
+                            {% for row in hubdb_table_rows(5327537) %}
+                            <option 
+                              value="{{ row.price }}" 
+                              {% if row.default == 1 %} selected {% endif %}
+                            >
+                              {{ row.desc }}
+                            </option>
+                            {% endfor %}
+                          </select>
+                        </div>
+                  
+               </div>
+             </div>
+           </div>            
+            <div id="setupOpt" class="accordion-item">
+              <div id="myBtn" class="accordion-item-header">
+                <img class="icn" src="{{ get_asset_url('../assets/sidebar-icn-05-setup.png') }}" alt="icn" />
+                SOFTWARE PACKAGES & SERVICES
+              </div>
+              <div  class="accordion-item-body">
+                <div  id="setupOptBody" class="accordion-item-body-content">
+                  <div id="inputTypicalFormats">
+                    <label for="">Typical Formats</label>
+                    <select id="selectTypical" class="select">
+                      {% for row in hubdb_table_rows(5321287) %}
+                      <option 
+                        value="{{ row.price }}" 
+                        {% if row.default == 1 %} selected {% endif %}
+                      >
+                        {{ row.desc }}
+                      </option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                  <div id="inputSuites">
+                    <label for="">Software Suites</label>
+                    <select id="selectSuites" class="select">
+                      {% for row in hubdb_table_rows(5327539) %}
+                      <option 
+                        value="{{ row.price }}" 
+                        {% if row.default == 1 %} selected {% endif %}
+                      >
+                        {{ row.desc }}
+                      </option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                  <form name="checkForm" action="">
+                    <div class="setup-switch" id="inputInstallation">
+                      <label class="switch">
+                        <input name="instalation" type="checkbox" id="instalation" value="0" required checked />
+                        <span class="slider round"></span>
+                      </label>
+                      <label for="instalation">Installation</label>
+                    </div>
+
+                    <div class="setup-switch" id="training">
+                      <label class="switch">
+                        <input name="workflowTraing" type="checkbox" id="workflowTraing" value="0" required />
+                        <span class="slider round"></span>
+                      </label>
+                      <label for="workflowTraing">Workflow training</label>
+                    </div>
+                    <div id="MediahubSwitch" style = "display:none" class="setup-switch">
+                      <label class="switch">
+                        <input name="mediaHubSet" type="checkbox" id="mediaHubSet" value="0" required  disabled  />
+                        <span class="slider round" style="background-color: grey;"></span>
+                      </label>
+                      <label for="mediaHubSet">MediaHub Set Up</label>
+                    </div>
+                      <div id="acceleratedUpload" style=" display:none; margin: 0px; margin-top: 0px; height: 20px; padding-left: 1.2rem; " class="setup-switch">
+                      <label class="switch">
+                        <input name="acceleratedUpload" style="background-color: grey;" type="checkbox" id="acceleratedUploadChk" value="0"  disabled required />
+                        <span class="slider round" style="background-color: grey;"></span>
+                      </label>
+                      <label for="acceleratedUploadlbl">Software Sync</label>
+                    </div>
+										<div id="mediahublbl" style="display: none; margin-bottom: 0px !important; margin-top: 10px; justify-content: center;" class="setup-switch">
+                      <label style="text-align: center; width: 60%; font: normal normal normal 12px/16px Nunito Sans;" for="mediahublbl">Includes Software Sync License and MediaHub Setup</label>
+                    </div>
+                  </form>
+                </div>
+              </div>  
+          </div>
+         </div>
+          <div class="total">
+            <div class="show-total">
+              <label>TOTAL</label>
+              <div>
+                <span>$</span>
+                <span id="totalFinal" class="counter">0</span>
+              </div>
+            </div>
+            <div class="dropUp-container">
+              <div class="dropUp">
+                <div class="dropUp__content">
+                  <a class="linkQuote">
+                    <p>SAVE QUOTE</p>
+                  </a>
+                </div>
+                <div class="dropUp-btn">
+                  <div class="triangleDown"></div>
+                </div>
+              </div>
+              <div class="dropUp-background" >
+                <div class="dropUp-background__content">
+                  <!-- <a class="saveQuote-item" onclick="window.print()"><img src="{{ get_asset_url('../assets/savequote-dropdown-savequote.png') }}" alt="save quote" />Print quote</a> -->
+                  <!-- <a
+                    target='_blank' href="https://f.hubspotusercontent40.net/hubfs/21098894/Finance_Application.pdf" 
+                  >
+                    <img src="{{ get_asset_url('../assets/savequote-dropdown-applyforfinancing.png') }}" alt="Apply for financy" />Apply for Financing</a
+                  > -->
+                  <a href="https://www.promax.com/jody" target="_blank"><img src="{{ get_asset_url('../assets/savequote-dropdown-startorder.png') }}" alt="Start yor Order" />Have Questions?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="container-modal">
+          <div id="myModal" class="modal">
+            <div class="container-table">
+              <div class="header-table">
+                <span class="close">
+                  <img src="{{ get_asset_url('../assets/btn-close.png') }}" alt="x" />
+                </span>
+                <table>
+                  <tr>
+                    <th class="table-tittle">Software Suite option</th>
+                    <th class="features">
+                      Shared Storage
+                      <div class="one"></div>
+                    </th>
+                    <th class="features">
+                      Media Management
+                      <div class="one"></div>
+                    </th>
+                    <th class="features">
+                      Complete Workflow
+                      <div class="one"></div>
+                    </th>
+                    <th class="features op2">
+                      Enterprise
+                      <div class="two"></div>
+                    </th>
+                  </tr>
+                </table>
+              </div>
+              <div id="scroll-table" class="modal-content table-container">
+                <table>
+                  <tr>
+                    <td class="benefit">Storage Sharing for Video Editing</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">Performance Tuning for Video Applications</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">Adobe PR Panels</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">Avid Bin Locking</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">Dropbox Integration</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">Users Permissions</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">3rd Party Storage Sharing</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">Mirroring</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">SnapShots</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">Automated System Maintenance</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">Tasks Notifications</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">ProMAX MAM</td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">ProMAX Proxy</td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">ProMAX Transcode</td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">ProMAX Cloud Connect</td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">ProMAX LTO</td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">ProMAX Rendering</td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">ProMAX Database</td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">Accelerator Active</td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">Directory Integration</td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">Group Permissions</td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">ProMAX Dedupe</td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="benefit">GPU Included</td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-remove"></i></td>
+                    <td><i class="fa fa-check"></i></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <div id="platformDisclaimer" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="hideModal(); return false">&times;</span>
+            <p style="margin-top: 75px; text-align: center; font: normal normal 600 13px/19px Nunito; color: #929292;">Performance may vary depending on file types and number of users</p>
+          </div>
+        </div> -->
+      </section>
+      {% for row in hubdb_table_rows(5327540) %}
+      <p id="{{row.id}}" style="display: none">{{ row.price }}</p>
+      {% endfor %}
+    </main>
+    
+    <script type="text/javascript" src="{{ get_asset_url('../js/data.js')}}"></script>
+    <!-- <script type="module" src="{{ get_asset_url('../js/script.js')}}"></script> -->
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.1/html2canvas.min.js"
+      integrity="sha512-Ki6BxhTDkeY2+bERO2RGKOGh6zvje2DxN3zPsNg4XhJGhkXiVXxIi1rkHUeZgZrf+5voBQJErceuCHtCCMuqTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+  {{ standard_footer_includes }}
+</html>

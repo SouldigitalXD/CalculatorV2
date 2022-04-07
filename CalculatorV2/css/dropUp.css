@@ -1,0 +1,139 @@
+.dropUp-container {
+  position: relative;
+}
+.dropUp {
+  position: relative;
+  /* right: 151px; */
+  display: flex;
+  background: #0041b8 0% 0% no-repeat padding-box;
+  border-radius: 23px;
+  cursor: pointer;
+  z-index: 101;
+	margin-right: 80px;
+}
+
+.submit {
+  position: relative;
+  /* right: 151px; */
+  margin-top: 20px;
+  background: #0041b8 0% 0% no-repeat padding-box;
+  border-radius: 23px;
+  cursor: pointer;
+  font: normal normal 800 16px/22px Nunito;
+  color: #ffffff;
+  
+  align-items: center;
+  justify-content: center;
+  width: 158px;
+  height: 37px;
+}
+
+.hs-input{
+  padding: 0rem 1rem;
+  outline: none;
+  height: 3rem;
+  color: #0d88ff;
+  font: normal normal bold 14px/19px Nunito Sans;
+  border: 2px solid #d6e3ff;
+  border-radius: 6px;
+}
+.dropUp__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 173px;
+  height: 46px;
+}
+.dropup_custom {
+  font: normal normal 800 16px/22px Nunito;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 158px;
+  height: 57px;
+}
+.dropUp__content p {
+  font: normal normal 800 16px/22px Nunito;
+  color: #ffffff;
+}
+.dropUp__content:hover {
+  border-radius: 23px 0px 0px 23px;
+  background-color: #0084f8;
+}
+.dropUp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 49px;
+  height: 46px;
+  background: #0021a5 0% 0% no-repeat padding-box;
+  border-radius: 0px 23px 23px 0px;
+}
+.dropUp-btn:hover {
+  background-color: #0084f8;
+}
+.triangleDown {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff;
+  text-align: center;
+}
+.triangleUp {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 6px solid #fff;
+  text-align: center;
+}
+
+.dropUp-background {
+  display: none;
+  position: absolute;
+  bottom: 2px;
+  /* left: 151px; */
+  width: 224px;
+  height: 95px;
+  background: #0084f8 0% 0% no-repeat padding-box;
+  border-radius: 23px;
+  transition: max-height 0.2s ease-out;
+}
+.dropUp-background__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dropUp-background a {
+  width: 222px;
+  height: 50px;
+  font: normal normal 800 15px/20px Nunito;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #0577e9;
+}
+.dropUp-background a:hover {
+  background-color: #0577e9;
+}
+.prueba {
+  background-color: #0074f8;
+}
+.dropUp-background img {
+  width: 20px;
+  height: 24px;
+  margin: 1rem 1rem -0.5rem 1rem;
+}
+.saveQuote-item {
+  cursor: pointer;
+  border-radius: 23px 23px 0px 0px;
+}
+.linkQuote {
+  text-decoration: none;
+}
+@media (max-width: 968px) {
+  .dropUp__content {
+    width: 128px;
+  }
+  .dropUp-background {
+    width: 212px;
+ 
+}
+}

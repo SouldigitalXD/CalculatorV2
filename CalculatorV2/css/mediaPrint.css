@@ -1,0 +1,341 @@
+@media print {
+  html {
+    /* height: 297mm;
+    width: 210mm; */
+    height: 100%;
+    overflow: hidden;
+  }
+  @page {
+    size: 297mm 210mm; /* landscape */
+    /* you can also specify margins here: */
+    margin: 25mm;
+    margin-right: 0mm; /* for compatibility with both A4 and Letter */
+  }
+  body,
+  header * {
+    visibility: hidden;
+  }
+  .printContainer,
+  .printContainer * {
+    visibility: visible;
+  }
+  .printContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .quotePrint {
+    width: 1366px;
+    height: 930px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+  .header-quotePrint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    height: 160px;
+  }
+  .header-quoteTittle {
+    display: flex;
+    align-items: center;
+    width: 736px;
+    height: 160px;
+    background: #fbfbfb 0% 0% no-repeat padding-box;
+    box-shadow: 1px 1px 1px solid #0000004d;
+  }
+  .header-quoteTittle h1 {
+    margin-left: 10rem;
+    font: normal normal 800 36px/49px Nunito;
+    color: #4b4b4b;
+  }
+  .logo-quotePrint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 352px;
+    height: 160px;
+    background: #f6f6f6 0% 0% no-repeat padding-box;
+  }
+  .quotePrint-content {
+    display: flex;
+    margin-top: 4rem;
+  }
+  .quotePrint-sideColumn div {
+    margin-left: 3rem;
+  }
+  .quotePrint-sideColumn .proMAXSystems {
+    width: 146px;
+    height: 24px;
+    text-align: left;
+    font: normal normal 800 18px/24px Nunito;
+  }
+  .quotePrint-sideColumn .address {
+    width: 145px;
+    height: 57px;
+    font: normal normal normal 14px/19px Nunito;
+    color: #929292;
+  }
+  .quotePrint-sideColumn .questions {
+    font: normal normal 800 16px/22px Nunito;
+    color: #686868;
+    opacity: 1;
+  }
+  .quotePrint-sideColumn .parr {
+    margin-top: 0.3rem;
+    font: normal normal normal 14px/19px Nunito;
+    color: #929292;
+  }
+  /* --------------------------------------------------------------------------------------------------------- */
+  .selection-menu__container {
+    position: relative;
+    margin-left: 8.7rem;
+    width: 800px;
+    /* height: 30%; */
+  }
+  .selection-menu {
+    padding-left: 10rem;
+  }
+  .items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f6f6f6;
+    height: 38px;
+    font: normal normal bold 14px/0px Nunito;
+    color: #484747;
+  }
+  .items .item {
+    padding-left: 3.5rem;
+  }
+  .items .cost {
+    padding-left: 12rem;
+  }
+  .items .price {
+    padding-left: 6rem;
+  }
+  .selection-menu__tittle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 38px;
+    background-color: var(--AquaBlue);
+  }
+  .selection-solution__content--label {
+    text-align: left;
+  }
+  .selection-menu__tittle {
+    padding-left: 2rem;
+    font: normal normal bold 18px/24px Nunito;
+    color: #fff;
+  }
+  .selection-solution {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f3f3f3;
+  }
+  .selection-menu__Solution {
+    border-bottom: 1px solid #f3f3f3;
+  }
+  .selection-solution .selection-solution--content {
+    display: flex;
+  }
+  .selection-menu__content--icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 2rem;
+  }
+  .selection-solution__content--label {
+    width: 104px;
+    height: 22px;
+    font: normal normal bold 16px/22px Nunito;
+    color: #484747;
+  }
+  .direct {
+    width: 92px;
+    height: 19px;
+    margin: 0;
+    font: normal normal 600 13px/19px Nunito;
+    color: #929292;
+  }
+  .container-bar {
+    margin-right: 1rem;
+  }
+  .selection-menu__solution--calc {
+    width: 193px;
+    height: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: normal normal 800 12px/16px Nunito Sans;
+    color: #acacac;
+  }
+  .price-fonts {
+    color: #686868;
+    font: normal normal bold 16px/22px Nunito;
+  }
+  .selection-menu__content--calc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #acacac;
+    font: normal normal 800 12px/16px Nunito Sans;
+  }
+
+  .selection-menu__content {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .selection-menu__content--block {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  .selection-menu__Storage {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f3f3f3;
+  }
+  .selection-menu__Storage img {
+    margin-right: 1rem;
+  }
+  .selection-menu__driverType {
+    font: normal normal bold 16px/22px Nunito;
+    color: #484747;
+  }
+  .expansion {
+    margin-top: 1rem;
+    display: flex;
+    color: #777777;
+  }
+  .selection-menu__X2 {
+    /* width: 20px; */
+    height: 14px;
+    background: #1cbbff 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    font: normal normal bold 11px/15px Nunito;
+    color: #ffffff;
+    padding: 0rem 3px;
+    margin: 0rem 1rem;
+  }
+  .selection-menu__Storage--content p {
+    text-align: left;
+    font: normal normal bold 12px/16px Nunito;
+    color: #777777;
+    margin: 0;
+  }
+  .selection-menu__Storage--content figure {
+    margin: 0;
+  }
+  .selection-menu__Storage--content {
+    display: flex;
+  }
+  .selection-menu__expansionCapacity {
+    text-align: left;
+    font: normal normal 600 14px/19px Nunito;
+    color: #929292;
+    margin-right: 0.2rem;
+    color: #929292;
+  }
+  #progress-Bar__storage {
+    width: 100%;
+    height: 4px;
+    background-color: #cff1ff;
+  }
+  .selection-menu__Users {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f3f3f3;
+  }
+  .selection-menu__users--content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .users {
+    font: normal normal bold 16px/22px Nunito;
+    color: #484747;
+    padding-left: 1rem;
+  }
+  #progress-Bar__users {
+    width: 100%;
+    height: 4px;
+    background-color: #cff1ff;
+  }
+  .selection-menu__setup {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0rem 4rem 0rem;
+    border-bottom: 2px solid #acacac;
+  }
+  .selection-menu__setup--content {
+    display: flex;
+    text-align: left;
+  }
+  .selection-menu__setup--content figure {
+    margin: 0;
+  }
+  .selection-menu__setup--content img {
+    margin-right: 1rem;
+  }
+  .Typical-formats {
+    width: 111px;
+    height: 39px;
+    font: normal normal bold 16px/17px Nunito;
+    color: #484747;
+  }
+  .software-suites {
+    font: normal normal 600 16px/14px Nunito;
+    color: #929292;
+  }
+  .ptext {
+    font: normal normal 600 16px/14px Nunito;
+    color: #929292;
+  }
+  #progress-Bar__setup {
+    width: 100%;
+    height: 4px;
+    background-color: #cff1ff;
+  }
+  .TotalPrint {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-left: 25rem;
+  }
+  .total-contentPrint {
+    margin-right: 1rem;
+  }
+  .TotalPrint label {
+    font: normal normal bold 16px/22px Nunito;
+    text-align: left;
+    color: #484747;
+  }
+  .total-contentPrint .price-fonts {
+    font: normal normal 800 21px/28px Nunito;
+  }
+  .total-contentPrint .counter {
+    font: normal normal 800 21px/28px Nunito;
+    text-align: right;
+    color: #686868;
+  }
+  .container-percentage {
+    display: none;
+  }
+  .barra {
+    display: none;
+  }
+  .occultSide {
+    display: block;
+  }
+}
